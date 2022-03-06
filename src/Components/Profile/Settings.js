@@ -16,18 +16,20 @@ const Settings = () => {
         const formData = new FormData();
         formData.append('file', fileInput.files[0]);
         console.log(fileInput.files[0]);
-        const imgResponse = await fetch(`http://139.155.71.103:8081/activity/imageUpload?address=${localStorage.getItem("walletAddress")}`, {
+        const imgResponse = await fetch(`http://139.155.71.103:8081/customer/avatar?address=${localStorage.getItem("walletAddress")}&customerNo=${localStorage.getItem("customerNo")}`, {
             method: 'POST',
             body: formData,
         });
         const imgJsonResponse = await imgResponse.json();
-        console.log(imgJsonResponse.imgUrl);
-        data.avatar = imgJsonResponse.imgUrl;
-        data.customerNo = "1";
+        console.log(imgJsonResponse.avatarUrl);
+        data.avatar = imgJsonResponse.avatarUrl;
+        data.customerNo = localStorage.getItem("customerNo");
         data.address = localStorage.getItem("walletAddress");
+        data.customerName = localStorage.getItem("customerName");
+        data.mail = localStorage.getItem("mail");
         
         const response = await fetch(
-            "http://139.155.71.103:8081/activity/release",
+            "http://139.155.71.103:8081/customer/info/update",
             {
                 method: "POST",
                 headers: {
