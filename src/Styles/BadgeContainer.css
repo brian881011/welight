@@ -1,0 +1,16 @@
+.badge_container{
+    width: 63vw;
+    margin-top: 3%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: auto;
+
+}
+
+@media screen and (max-width: 650px){
+    .badge_container{
+        width: 84vw;
+    }
+}

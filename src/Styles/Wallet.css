@@ -1,0 +1,43 @@
+.walletConnect {
+    margin:auto;
+    height:90vh;
+    width:30vw;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.connectImage{
+  margin-top: 10vh;
+  margin-bottom: 20px;
+  width:5vw;
+  height:5vw;
+  border: 1px solid #2AF598;
+  border-radius: 100%;
+  background-image: url("../Assets/walletConnect.png");
+  background-size: 2.5vw 2.5vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.connectTitle{
+    text-align:center;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .walletBackButton{
+    color:white;
+    width: 40%;
+    height: 45px;
+    background: transparent;
+    background-image: url("../Assets/whiteHollowButtonLong.png");
+    background-size: 100% 100%;
+    border: none;
+    margin-left: 30%;
+    cursor: pointer;
+}

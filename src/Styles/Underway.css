@@ -1,0 +1,31 @@
+.underway{
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#underway_title{
+    color: white;
+    margin-left: 10vw;
+    height:auto;
+    
+}
+
+#underway_title h1{
+    font-size: 3.5vw;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 650px){
+    .underway{
+        width: 90vw;
+    }
+    #underway_title{margin-left: 3vw;}
+
+
+}

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;800;900&display=swap');
+
+*{    
+    font-family: 'Inter';
+}
+
+.header{
+    height:70px;
+    width:100vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+.header_left{
+    width:40vw;
+    float:left;
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+.header_right{
+    position:absolute;
+    right: 0;
+    width: auto;
+    float:right;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    margin-right: 1vw;
+}
+
+.header_right div{
+    color: white;
+}
+
+#logo{
+    width: 112px;
+    height: 28px;
+    background-image: url("../Assets/LOGO.png");
+    background-size: 100% 100%;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+
+#search {
+    text-align: center;
+    color: white;
+    width: 5vw;
+    font-size: 12px;
+}
+
+#explore{
+    text-align: left;
+    font-size: 12px;
+    width: 60px;
+}
+
+#create{
+    text-align: left;
+    font-size: 12px;
+    width: 60px;
+}
+
+#about{
+    text-align: left;
+    font-size: 12px;
+    width: 60px;
+}
+
+#faq{
+    text-align: left;
+    font-size: 12px;
+    width: 60px;
+}
+
+.headerProfile{
+    color: #2AF598;
+    text-align: center;
+    width: 152px;
+    height: 42px;
+    margin-bottom: 10px;
+    background: transparent;
+    background-image: url("../Assets/greenHollowButton.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.headerProfile:hover{
+    background-color: #1F1F25;
+}
+
+.headerDropdown{
+    position: absolute;
+    width: 152px;
+    top: 72px;
+    right: 0;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#wallet{
+    color: #2AF598;
+    overflow: hidden;
+    background: transparent;
+    background-image: url("../Assets/greenHollowButton.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 152px;
+    height: 42px;
+    margin: 11px;
+    text-overflow : ellipsis;
+}
+
+@media screen and (max-width: 650px){
+    .header{height: 50px;}
+    #explore,#faq,#about,#create{width:40px;font-size:xx-small;padding: 5px;}
+    #wallet, .headerProfile{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+    }
+    .headerDropdown{
+        width: 120px;
+        height: 80px;
+        font-size: 9px;
+        top:56px;
+        margin-bottom: 0;
+    }
+    #logo{
+        width:80px;
+        height:20px;
+    }
+
+}

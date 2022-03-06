@@ -1,0 +1,180 @@
+.registration{
+    width:100%;
+    color:white;
+}
+
+#registration_title{
+    width: 40vw;
+    text-align: center;
+    font-size: larger;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#registration_title h1{
+    font-weight: 900;
+}
+
+#regFormContainer{
+    width:70vw;
+    display: flex;
+    margin: auto;
+}
+
+
+#regForm{ 
+    width: 46vw;
+    display: flex;
+    flex-direction: column; 
+    margin-left: 3vw;
+}
+
+
+#regForm p{
+    margin-bottom: 20px;
+}
+
+.regFormCell{
+    width: 46vw;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.regFormCell label { 
+    width: 30%;
+    font-size: 5px;
+    margin-bottom: 5px;
+}
+
+.regFormCell label span{
+    color:#2BF598;
+}
+
+.regFormCell input{ 
+    background-color: black;
+    width: 500px;
+    height: 20px;
+    font-size: 2px;
+    padding: 10px;
+    border: 1px solid #333333;
+    color: white;
+}
+
+#timeZonePicker{
+    width: 522px;
+    height: 42px;
+    background-color: black;
+    font-size: 2px;
+    color: white;
+    padding: 2px;
+}
+
+.regFormCell select option{
+    color: white;
+}
+
+.regFormCell textarea {
+    background-color: black;
+    width: 500px;
+    height: 60px;
+    font-size: 2px;
+    padding: 10px;
+    border: 1px solid #333333;
+    color: white;
+}
+
+.imageUpload{
+    height:auto;
+}
+
+.imgUploadButton{
+    height: 100px;
+    width:100px;
+    border-radius: 100%;
+    background-image: url("../Assets/imageUpload.png");
+    background-color: #1B191C;
+    background-size:80px 80px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.imgUploadButton:hover{
+    border: 1px solid grey;
+}
+
+#date{
+    display:inline-block;
+}
+
+.buttons{
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.backButton{
+    color:white;
+    width: 90px;
+    height: 45px;
+    background: transparent;
+    background-image: url("../Assets/whiteHollowButton.png");
+    background-size: 90px 45px;
+    border: none;
+    cursor: pointer;
+}
+
+.continueButton{
+    width: 120px;
+    height: 45px;
+    font-weight: 700;
+    background: transparent;
+    background-image: url("../Assets/greenButton.png");
+    background-size: 120px 45px;
+    border: none;
+    cursor: pointer;
+}
+
+
+#continue{
+    color:white;
+    background-color:black;
+    border-radius: 0;
+}
+
+.error{
+    color: red;
+    font-size: 2px;
+    margin-left: 2px;
+}
+::-webkit-datetime-edit{
+    color: white;
+    padding: 0;
+}
+::-webkit-calendar-picker-indicator {
+    height:15px;
+    width:15px;
+    cursor: pointer;
+    background-image: url("../Assets/calendarIcon.png"); 
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill
+{
+  -webkit-text-fill-color: white;
+  background-color: black;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+@media screen and (max-width: 650px){
+    #regFormContainer{width: 90vw;}
+}

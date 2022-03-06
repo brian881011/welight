@@ -1,0 +1,33 @@
+.comingSoon{
+    margin:auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    height: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+
+#comingSoon_title{
+    color: white;
+    margin-left: 10vw;
+    height:auto;
+    
+}
+
+#comingSoon_title h1{
+    font-size: 3.5vw;
+    font-weight: 800;
+}
+
+@media screen and (max-width: 650px){
+    .comingSoon{
+        width: 90vw;
+    }
+    #comingSoon_title{margin-left: 3vw;}
+
+
+}

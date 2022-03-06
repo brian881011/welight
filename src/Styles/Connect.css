@@ -1,0 +1,14 @@
+.connectButton{
+    width:150px;
+    height: 50px;
+    background: transparent;
+    background-image: url("../Assets/greenButton.png");
+    background-size: 150px 50px;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    padding: 10px;
+    font-weight: 700;
+    
+
+}

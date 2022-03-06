@@ -1,0 +1,44 @@
+#progressBar{
+  width:160px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdiv{
+  display: flex;
+  width: 160px;
+  height:25%;
+}
+
+.sImg{
+  width:20px;
+  height: 100%;
+}
+
+.pCircle{
+  width:20px;
+  height:20px;
+  border-radius:100%;
+  background-size: 100% 100%;
+
+}
+
+.pLine{
+  width:0px;
+  height:30px;
+  margin:auto;
+  margin-top:3px;
+
+}
+
+.sDetails{
+  margin-left: 10px;
+  width:130px;
+  height: 100%;
+  font-size: 12px;
+}
+
+.sDetails span{
+  font-size: 1vw;
+}

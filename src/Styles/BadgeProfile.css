@@ -1,0 +1,105 @@
+.badgeProfile{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.badgeProfileInner{
+    background-color: black;
+    margin:auto;
+    margin-top:10vh;
+    margin-bottom:10vh;
+    border-radius: 20px;
+    border: white solid 2px;
+    display: flex;
+    width: 80vw;
+    height: 75vh;
+    
+}
+
+.closeButton{
+    position: absolute;
+    top:15vh;
+    right:12vw;
+    width:20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    background-image:url("../Assets/closeButton.png");
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.badgeProfileL{
+    color: white;
+    width:24%;
+    margin: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.badgeProfileR{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    width:74%;
+    margin:5vh;
+}
+
+.badgeProfileR h2{
+    font-size: 1vw;
+    line-height: 3vw;
+    width: 100%;
+}
+
+.badgeProfileR h2 span{
+    font-size: 2vw;
+    font-weight: 800;
+}
+
+.badgeProfileR h3{
+    width: 50%;
+    font-weight: 600;
+    font-size: 1vw;
+    line-height: 2vw;
+}
+
+.badgeProfileR h3 span{
+    opacity: 0.45;
+    font-size: 1vw;
+}
+
+.badgeProfileImg{
+    margin: auto;
+    margin-bottom: 25vh;
+    margin-left: 2vw;
+    border-radius: 100%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15vw;
+    height: 15vw;
+}
+
+.badgeButton{
+    width:10.42vw;
+    height: 3.125vw;
+    background: transparent;
+    background-image: url("../Assets/greenButton.png");
+    background-size: 100% 100%;
+    border: none;
+    cursor: pointer;
+    margin-top: 10vh;
+    margin-right: 20px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+
