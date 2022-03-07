@@ -25,11 +25,11 @@ export const BadgeProfile = (props) => {
                         <h3><span>Collected/Total</span><br/>{badge.badgeHasClaimed}/{badge.badgeTotal}</h3>
                         <h3><span>Event Organizer</span><br/>{badge.organizer}</h3>
 
-                        <div style={{display:"flex"}}>
+                        <div style={{display:"flex", flexWrap:"wrap"}}>
                             <button className='badgeButton'>
                                 How to get it?
                             </button>
-                            <div style={{width:"18vw",height:"3.125vw", lineHeight:"1.25vw",fontSize:"2px", marginTop:"11vh", fontWeight:"200"}}>Please pay close attention to the social media channel from the organizer</div>
+                            <div style={{width:"180px",height:"30px", lineHeight:"12.5px",fontSize:"2px", fontWeight:"200", marginBottom:"20px"}}>Please pay close attention to the social media channel from the organizer</div>
                         </div>
                     </div>
                 </div>

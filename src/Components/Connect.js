@@ -61,7 +61,7 @@ const Connect = () => {
       {localStorage.getItem('walletConnected') ? (
         ""
       ) : (
-        <button className="connectButton" onClick={connectToMyAlgo}>
+        <button className="connectButton" onClick={temp}>
           Connect Wallet
         </button>
       )}

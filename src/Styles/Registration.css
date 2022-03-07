@@ -44,7 +44,7 @@
 
 
 .regFormCell label { 
-    width: 30%;
+    width: 200px;
     font-size: 5px;
     margin-bottom: 5px;
 }
@@ -113,15 +113,18 @@
 }
 
 .buttons{
+    position: relative;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    width: 65%;
+    width: 500px;
     display: flex;
     justify-content: space-between;
 }
 
 .backButton{
+    position: absolute;
+    left:0;
     color:white;
     width: 90px;
     height: 45px;
@@ -133,6 +136,8 @@
 }
 
 .continueButton{
+    position: absolute;
+    right:0;
     width: 120px;
     height: 45px;
     font-weight: 700;
@@ -174,7 +179,20 @@ textarea:-webkit-autofill
   transition: background-color 5000s ease-in-out 0s;
 }
 
-
-@media screen and (max-width: 650px){
+@media screen and (max-width: 900px) and (min-width:700px){
+    .regFormCell input, .regFormCell textarea{width: 400px;}
+    #timeZonePicker, .buttons{width: 422px;}
+}
+@media screen and (max-width: 700px){
     #regFormContainer{width: 90vw;}
+    .regFormCell input, .regFormCell textarea{width: 300px;}
+    #timeZonePicker, .buttons{width: 322px;}
+    #registration_title{width:70vw;font-size: small;}
+    #regForm{margin-left: 1vw;}
+}
+
+@media screen and (max-width: 500px){
+    .regFormCell input, .regFormCell textarea{width: 250px;}
+    #timeZonePicker, .buttons{width: 272px;}
+    #regForm{margin-left: 0;}
 }

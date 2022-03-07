@@ -20,14 +20,14 @@
     border: white solid 2px;
     display: flex;
     width: 80vw;
-    height: 75vh;
+    height: auto;
     
 }
 
 .closeButton{
     position: absolute;
-    top:15vh;
-    right:12vw;
+    top:10px;
+    right:10px;
     width:20px;
     height: 20px;
     background-color: transparent;
@@ -39,66 +39,68 @@
 
 .badgeProfileL{
     color: white;
-    width:24%;
-    margin: 5vh;
+    width:250px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
 }
 
 .badgeProfileR{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     color: white;
     width:74%;
-    margin:5vh;
+    margin:5px;
 }
 
 .badgeProfileR h2{
-    font-size: 1vw;
+    margin-top: 50px;
+    font-size: 12px;
     line-height: 3vw;
     width: 100%;
 }
 
 .badgeProfileR h2 span{
-    font-size: 2vw;
+    font-size: 24px;
     font-weight: 800;
 }
 
 .badgeProfileR h3{
     width: 50%;
+    min-width: 150px;
     font-weight: 600;
-    font-size: 1vw;
-    line-height: 2vw;
+    font-size: 12px;
+    line-height: 24px;
 }
 
 .badgeProfileR h3 span{
     opacity: 0.45;
-    font-size: 1vw;
+    font-size: 12px;
 }
 
 .badgeProfileImg{
     margin: auto;
-    margin-bottom: 25vh;
+    margin-bottom: 200px;
     margin-left: 2vw;
     border-radius: 100%;
     background-color: white;
     background-repeat: no-repeat;
     background-position: center;
-    width: 15vw;
-    height: 15vw;
+    width: 150px;
+    height: 150px;
 }
 
 .badgeButton{
-    width:10.42vw;
-    height: 3.125vw;
+    width:120px;
+    height: 40px;
     background: transparent;
     background-image: url("../Assets/greenButton.png");
     background-size: 100% 100%;
     border: none;
     cursor: pointer;
-    margin-top: 10vh;
     margin-right: 20px;
-    padding: 10px;
+    margin-bottom: 20px;
     font-weight: 600;
 }
 

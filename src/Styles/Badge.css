@@ -1,10 +1,8 @@
 .badge{
-    height:20vw;
-    width:14vw;
+    height:200px;
+    width:140px;
     margin-right: 1.5vw;
     margin-bottom: 3vw;
-    min-width: 140px;
-    min-height: 200px;
     text-decoration: none;
     cursor: pointer;
 }
@@ -85,17 +83,17 @@
 }
 
 .viewActivityButton{
-    width:60%;
+    width:90px;
     height: 35px;
     background: transparent;
     background-image: url("../Assets/greenButton.png");
     background-size: 100% 100%;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
-    margin-left: 20%;
-    padding: 10px;
+    margin-top: 10px;
+    margin-left: 25px;
     font-weight: 600;
+    font-size: xx-small;
 }
 
 .cancelActivityButton{
@@ -106,7 +104,7 @@
     border: none;
     cursor: pointer;
     color:#2AF598;
-    margin-top: 10px;
+    margin-top: 7px;
     margin-left: 20%;
     padding: 10px;
     font-weight: 400;
