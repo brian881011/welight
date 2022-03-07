@@ -3,7 +3,7 @@ import { BadgeContainer } from '../BadgeContainer';
 import UnderwayBadgeJson from '../UnderwayBadgeJson';
 import '../../Styles/Underway.css';
 
-const Underway = ()=> {
+const Underway = () => {
 
     const [underwayJson, setUnderwayJson] = useState(UnderwayBadgeJson);
 
@@ -11,25 +11,24 @@ const Underway = ()=> {
         getUnderway();
     }, []);
 
-    const getUnderway = async () =>{
+    const getUnderway = async () => {
         const response = await fetch(
-          "http://139.155.71.103:8081/activity/list/underway",
-          {
-              method: "POST",
-              headers: {
-                  'Content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                "currentPage": 1,
-                "pageSize": 10000,
-                "seqNo": "string"
-              }),
-          }
+            "http://139.155.71.103:8081/activity/list/underway",
+            {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "currentPage": 1,
+                    "pageSize": 10000
+                }),
+            }
         );
         const jsonResponse = await response.json();
         console.log(jsonResponse);
         setUnderwayJson(jsonResponse.rows);
-      }
+    }
 
 
 

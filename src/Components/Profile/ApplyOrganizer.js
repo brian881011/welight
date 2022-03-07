@@ -11,8 +11,7 @@ const ApplyOrganizer = () => {
     const { register, handleSubmit, formState: { errors }, control } = useForm();
     const onSubmit = async (data) => {
 
-        data.customerNo = "1";
-        data.seqNo = "1";
+        data.customerNo = localStorage.getItem("customerNo");
         data.address = localStorage.getItem("walletAddress");
         
         const response = await fetch(
