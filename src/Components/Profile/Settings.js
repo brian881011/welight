@@ -69,14 +69,14 @@ const Settings = () => {
                         <div className="settingsFormCell">
                             <label>Avatar</label>
                             <div className='imageUpload'>
-                                <UploadImage />
+                                <UploadImage img={localStorage.getItem("avatar")}/>
                             </div>
                         </div>
                         
                             
                         <div className="settingsFormCell">    
                             <label>Nickname</label> 
-                            <input type="text" placeholder="Please enter nickname"
+                            <input type="text" placeholder={localStorage.getItem("customerName")||"Please enter nickname"}
                                 {...register("customerName", { maxLength: 20 })}
                                     
                                />
@@ -86,7 +86,7 @@ const Settings = () => {
                         </div>   
                         <div className="settingsFormCell">    
                             <label>Contact Email</label> 
-                            <input type="text" placeholder="Please enter your email"
+                            <input type="text" placeholder={localStorage.getItem("mail")||"Please enter your email"}
                                 {...register("mail", {pattern: /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/})} 
                                 />
                             <div className="error">

@@ -6,11 +6,11 @@ import MyAlgoConnect from "@randlabs/myalgo-connect";
 
 const Connect = () => {
 
-  // useEffect(
-  //   () => {
-  //     temp();
-  // }, []
-  // );
+  useEffect(
+     () => {
+       temp();
+   }, []
+ );
 
   const connectToMyAlgo = async () => {
     console.log(0);
@@ -30,6 +30,7 @@ const Connect = () => {
   };
 
   const temp = async()=>{
+      console.log(1111);
       localStorage.setItem('walletAddress', "OSLJOZ7V2AB3G5GQFAQIBCO65DK6JIRNNOKCTWNJKJJRUQGQAEUJMAFPRA");
       localStorage.setItem('walletConnected', true);
       console.log(9);
@@ -42,18 +43,16 @@ const Connect = () => {
             },
             body: JSON.stringify({
               "address": "OSLJOZ7V2AB3G5GQFAQIBCO65DK6JIRNNOKCTWNJKJJRUQGQAEUJMAFPRA",
-              "seqNo": "string"
             }),
         }
       );
       const jsonResponse = await response.json();
       console.log(jsonResponse);
-      /*
       localStorage.setItem("avatar", jsonResponse.avatar);
-      localStorage.setItem("custNo", jsonResponse.custNo);
-      localStorage.setItem("custName", jsonResponse.custName);
+      localStorage.setItem("customerNo", jsonResponse.customerNo);
+      localStorage.setItem("customerName", jsonResponse.customerName);
       localStorage.setItem("customerType", jsonResponse.customerType);
-      localStorage.setItem("mail", jsonResponse.mail);*/
+      localStorage.setItem("mail", jsonResponse.mail);
   }
 
   return (
@@ -67,7 +66,8 @@ const Connect = () => {
       )}
       <p style={{fontWeight:"600", margin:"50px",color:"white", textAlign:"center"}}>
         Address:<br /><br />
-        {localStorage.getItem('walletConnected') ? localStorage.getItem("walletAddress") : "Address will show here"}
+        {localStorage.getItem('walletConnected') ? localStorage.getItem("walletAddress") : "Address will show here"}<br />
+        customerType:{localStorage.getItem('customerType')}
       </p>
     </div>
   );
