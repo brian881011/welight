@@ -8,7 +8,7 @@ const Connect = () => {
 
   useEffect(
      () => {
-       temp();
+      if(!localStorage.getItem("walletAddress")){connectToMyAlgo();}
    }, []
  );
 
@@ -60,14 +60,13 @@ const Connect = () => {
       {localStorage.getItem('walletConnected') ? (
         ""
       ) : (
-        <button className="connectButton" onClick={temp}>
+        <button className="connectButton">
           Connect Wallet
         </button>
       )}
       <p style={{fontWeight:"600", margin:"50px",color:"white", textAlign:"center"}}>
         Address:<br /><br />
         {localStorage.getItem('walletConnected') ? localStorage.getItem("walletAddress") : "Address will show here"}<br />
-        customerType:{localStorage.getItem('customerType')}
       </p>
     </div>
   );

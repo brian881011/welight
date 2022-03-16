@@ -27,7 +27,6 @@ const ActivityCenter = ()=> {
                 "currentPage": 1,
                 "customerNo": "string",
                 "pageSize": 1,
-                "seqNo": "string"
               }),
           }
         );
@@ -57,9 +56,11 @@ const ActivityCenter = ()=> {
                     </Link>
                 </div>
                 <div className='profileContent'>
-                    <button className="releaseActivities">
-                        Release Activities
-                    </button>
+                    <Link to="/Registration" style={{textDecoration:"none"}}>
+                        <button className="releaseActivities">
+                            Release Activities
+                        </button>
+                    </Link>
                     <div className='activityAudit'>
                         <div id="activityAuditTitle">Activity Audit</div>
                         <AuditingBadgeContainer BadgeJson={activityCenterJson} />

@@ -26,7 +26,7 @@ const ComingSoon = () => {
             }
         );
         const jsonResponse = await response.json();
-        console.log(jsonResponse);
+        // console.log(jsonResponse);
         if (jsonResponse.rows.length > 0) { setComingSoonJson(jsonResponse.rows); }
 
     }

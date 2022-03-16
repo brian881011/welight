@@ -17,7 +17,6 @@ export const Badge = (props) => {
     const togglePopup = () => {
         setIsOpen(!isOpen);
         setId(badgeAsaId);
-        console.log(1);
       }
 
     return (

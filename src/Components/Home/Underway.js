@@ -26,7 +26,7 @@ const Underway = () => {
             }
         );
         const jsonResponse = await response.json();
-        console.log(jsonResponse);
+        // console.log(jsonResponse);
         setUnderwayJson(jsonResponse.rows);
     }
 

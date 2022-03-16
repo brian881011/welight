@@ -17,7 +17,6 @@ const Registration = () => {
         const fileInput = document.getElementById('imgUploader') ;
         const formData = new FormData();
         formData.append('file', fileInput.files[0]);
-        console.log(fileInput.files[0]);
         const imgResponse = await fetch(`http://139.155.71.103:8081/activity/imageUpload?address=${localStorage.getItem("walletAddress")}`, {
             method: 'POST',
             body: formData,
@@ -27,7 +26,7 @@ const Registration = () => {
         data.badgeImgUrl = imgJsonResponse.imgUrl;
         data.timeZone = document.getElementById('timeZonePicker').value;
         data.seqNo = "1";
-        data.badgeTotal = 5;
+        //data.badgeTotal = document.getElementById();
         data.issuerAddress = localStorage.getItem("walletAddress");
         
         const response = await fetch(
@@ -41,8 +40,8 @@ const Registration = () => {
             }
           );
         const jsonResponse = await response.json();
-        console.log(data);
-        console.log(jsonResponse);
+        // console.log(data);
+        // console.log(jsonResponse);
       }
 
     useEffect(()=>{
