@@ -1,7 +1,35 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import '../Styles/BadgeProfile.css';
 
 export const BadgeProfile = (props) => {
+
+    useEffect(() => {
+        getState();
+    }, []);
+
+    const getState = async () => {
+        const response = await fetch(
+            "http://139.155.71.103:8081/customer/activity/link",
+            {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "activityId": badge.activityId,
+                    "address": localStorage.getItem("walletAddress")||"",
+                    "customerNo": localStorage.getItem("customerNo")||"",
+                }),
+            }
+        );
+        const jsonResponse = await response.json();
+        console.log(badge.activityId);
+        console.log(localStorage.getItem("walletAddress")||"");
+        console.log(localStorage.getItem("customerNo")||"");
+        console.log(jsonResponse);
+    }
+
+
     const asaId = props.asaId;
     const badgeJson = props.badgeJson;
     const badge = badgeJson.filter(badge => badge.badgeAsaId === asaId)[0];

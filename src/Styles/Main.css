@@ -17,11 +17,12 @@
     flex-flow: column;
 }
 
-#backGround{
+#backGroundWelight{
     background-image: url("../Assets/intro3.png");
     background-repeat: no-repeat;
     background-size: 100vw 56.25vw;
 }
+
 
 
 .footer{

@@ -5,6 +5,7 @@ import { Link} from "react-router-dom";
 import { BadgeContainer } from '../BadgeContainer';
 import {AuditingBadgeContainer} from '../AuditingBadgeContainer';
 import UnderwayBadgeJson from '../UnderwayBadgeJson';
+import Header from '../Header';
 
 const ActivityCenter = ()=> {
 
@@ -37,39 +38,44 @@ const ActivityCenter = ()=> {
       }
 
         return (
-            <div className='profile'>
-                <div className='profileButtons'>
-                    <Link to="/Profile" style={{textDecoration:"none"}}>
-                        <button className='profileButton' >
-                            Account Settings
-                        </button>
-                    </Link>
-                    <Link to="/Profile/MyBadge" style={{textDecoration:"none"}}>
-                        <button className='profileButton'>
-                            My Badge
-                        </button>
-                    </Link>
-                    <Link to="/Profile/ActivityCenter" style={{textDecoration:"none"}}>
-                        <button className='profileButton' style={{borderLeft:"2px solid #2AF598",color: "white"}}>
-                            Activity Center
-                        </button>
-                    </Link>
-                </div>
-                <div className='profileContent'>
-                    <Link to="/Registration" style={{textDecoration:"none"}}>
-                        <button className="releaseActivities">
-                            Release Activities
-                        </button>
-                    </Link>
-                    <div className='activityAudit'>
-                        <div id="activityAuditTitle">Activity Audit</div>
-                        <AuditingBadgeContainer BadgeJson={activityCenterJson} />
-                    
-                    </div>
-                    <div className='completedActivities'>
-                        <div id="completedActivitiesTitle">Hosted Activities</div>
-                        <BadgeContainer BadgeJson={activityCenterJson} />
-                    
+            <div id="backGround">
+                <Header />
+                <div className="body">
+                    <div className='profile'>
+                        <div className='profileButtons'>
+                            <Link to="/Profile" style={{textDecoration:"none"}}>
+                                <button className='profileButton' >
+                                    Account Settings
+                                </button>
+                            </Link>
+                            <Link to="/Profile/MyBadge" style={{textDecoration:"none"}}>
+                                <button className='profileButton'>
+                                    My Badge
+                                </button>
+                            </Link>
+                            <Link to="/Profile/ActivityCenter" style={{textDecoration:"none"}}>
+                                <button className='profileButton' style={{borderLeft:"2px solid #2AF598",color: "white"}}>
+                                    Activity Center
+                                </button>
+                            </Link>
+                        </div>
+                        <div className='profileContent'>
+                            <Link to="/Registration" style={{textDecoration:"none"}}>
+                                <button className="releaseActivities">
+                                    Release Activities
+                                </button>
+                            </Link>
+                            <div className='activityAudit'>
+                                <div id="activityAuditTitle">Activity Audit</div>
+                                <AuditingBadgeContainer BadgeJson={activityCenterJson} />
+                            
+                            </div>
+                            <div className='completedActivities'>
+                                <div id="completedActivitiesTitle">Hosted Activities</div>
+                                <BadgeContainer BadgeJson={activityCenterJson} />
+                            
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

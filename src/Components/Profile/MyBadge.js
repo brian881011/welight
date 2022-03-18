@@ -3,6 +3,7 @@ import '../../Styles/MyBadge.css';
 import { Link } from "react-router-dom";
 import { BadgeContainer } from '../BadgeContainer';
 import UnderwayBadgeJson from '../UnderwayBadgeJson';
+import Header from '../Header';
 
 const MyBadge = () => {
 
@@ -34,28 +35,33 @@ const MyBadge = () => {
     }
 
     return (
-        <div className='profile'>
-            <div className='profileButtons'>
-                <Link to="/Profile" style={{ textDecoration: "none" }}>
-                    <button className='profileButton'>
-                        Account Settings
-                    </button>
-                </Link>
-                <Link to="/Profile/MyBadge" style={{ textDecoration: "none" }}>
-                    <button className='profileButton' style={{ borderLeft: "2px solid #2AF598", color: "white" }}>
-                        My Badge
-                    </button>
-                </Link>
-                <Link to="/Profile/ActivityCenter" style={{ textDecoration: "none" }}>
-                    <button className='profileButton'>
-                        Activity Center
-                    </button>
-                </Link>
-            </div>
-            <div className='myBadgeContent'>
-                <div id="myBadgeTitle">Completed Activities</div>
-                <BadgeContainer BadgeJson={myBadgeJson} />
+        <div id="backGround">
+            <Header />
+            <div className="body">
+                <div className='profile'>
+                    <div className='profileButtons'>
+                        <Link to="/Profile" style={{ textDecoration: "none" }}>
+                            <button className='profileButton'>
+                                Account Settings
+                            </button>
+                        </Link>
+                        <Link to="/Profile/MyBadge" style={{ textDecoration: "none" }}>
+                            <button className='profileButton' style={{ borderLeft: "2px solid #2AF598", color: "white" }}>
+                                My Badge
+                            </button>
+                        </Link>
+                        <Link to="/Profile/ActivityCenter" style={{ textDecoration: "none" }}>
+                            <button className='profileButton'>
+                                Activity Center
+                            </button>
+                        </Link>
+                    </div>
+                    <div className='myBadgeContent'>
+                        <div id="myBadgeTitle">Completed Activities</div>
+                        <BadgeContainer BadgeJson={myBadgeJson} />
 
+                    </div>
+                </div>
             </div>
         </div>
     )
