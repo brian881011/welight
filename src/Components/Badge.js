@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import BadgeProfile from './BadgeProfile';
 import '../Styles/Badge.css';
 
-export const Badge = (props) => {
+export const Badge = ({badge}) => {
     const [isOpen, setIsOpen] = useState(false);
     const [id, setId] = useState(null);
 
-    let badgeJson = props.badgeJson;
-    let activityName  = props.activityName;
-    let badgeAsaId = props.badgeAsaId;
-    let badgeTotal = props.badgeTotal;
-    let badgeHasClaimed = props.badgeHasClaimed;
-    let badgeImgUrl = props.badgeImgUrl;
+    let badgeJson = badge.badgeJson;
+    let activityName  = badge.activityName;
+    let badgeAsaId = badge.badgeAsaId;
+    let badgeTotal = badge.badgeTotal;
+    let badgeHasClaimed = badge.badgeHasClaimed;
+    let badgeImgUrl = badge.badgeImgUrl;
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
@@ -34,7 +34,7 @@ export const Badge = (props) => {
                 <div className="badgeImg" style={{backgroundImage:"url("+badgeImgUrl+")", backgroundSize: "contain"}}></div>
                 <div className="triangle"></div>
             </div>
-            {isOpen && <BadgeProfile badgeJson={badgeJson} asaId={id} handleClose={togglePopup}/>}
+            {isOpen && <BadgeProfile badge={badge} handleClose={togglePopup}/>}
         </>
     )
 }

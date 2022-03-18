@@ -30,9 +30,7 @@ export const BadgeProfile = (props) => {
     }
 
 
-    const asaId = props.asaId;
-    const badgeJson = props.badgeJson;
-    const badge = badgeJson.filter(badge => badge.badgeAsaId === asaId)[0];
+    const badge = props.badge;
     
     
     return(
@@ -40,7 +38,7 @@ export const BadgeProfile = (props) => {
                 <div className="badgeProfileInner">
                     <div className="badgeProfileL">
                         <div className="badgeProfileImg" 
-                            style={{backgroundImage:"url("+badge.badgeImg+")", backgroundSize: "contain"}}>
+                            style={{backgroundImage:"url("+badge.badgeImgUrl+")", backgroundSize: "contain"}}>
                         </div>
                     </div>
                     <div className="badgeProfileR">
