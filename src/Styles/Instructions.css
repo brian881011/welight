@@ -14,16 +14,16 @@
     justify-content: center;
     margin-left: 10vw;
     color: white;
-    width: 30vw;
+    width: 350px;
 }
 
 #instructions_title h1{
     font-weight: 900;
-    font-size: 3.5vw;
+    font-size: 45px;
 }
 
 #instructions_content{
-    width: 40vw;
+    width: 390px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -33,8 +33,8 @@
 
 .instructionsBlock{
     display: flex;
-    width:30vw;
-    height:12.5vw;
+    width:390px;
+    height:160px;
     background-image: url("../Assets/howItWorksBlock.png");
     background-size: 100% 100%;
     border: 1px solid;
@@ -70,7 +70,6 @@
 }
 
 .instructionsDetails{
-    font-size: 1.5vh;
     padding: 10px;
     color: white;
     width: 80%;
@@ -78,11 +77,12 @@
 
 }
 
-#instructions_content div div h3{
-    font-size: 2vh;
+#instructions_content div div h2{
+    font-size: 20px;
 }
 
 #instructions_content div div p{
+    font-size: 15px;
     color: #95979b;
 }
 
@@ -90,12 +90,12 @@
     .instructions{
         width: 90vw;
     }
-    #instructions_title{margin-left: 3vw;width:30vw;}
+    /* #instructions_title{margin-left: 3vw;width:30vw;}
     #instructions_content{margin-left: 3vw;width: 54vw;}
     .instructionsBlock{
         display: flex;
         width:45vw;
         height:19vw;
     }
-    #instructions_content div div h3{font-size: 1vw;}
+    #instructions_content div div h3{font-size: 1vw;} */
 }
