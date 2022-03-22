@@ -45,17 +45,23 @@ const Registration = () => {
         // console.log(jsonResponse);
       }
 
-    useEffect(()=>{
-        trigger();
-    },[currentStep]
-    );
+    // useEffect(()=>{
+    //     trigger();
+    // },[currentStep]
+    // );
 
-    function b1Trigger(){
-        if(!errors.activityName &&!errors.startDate &&!errors.endDate &&!errors.activityAccess&&!errors.activityLink){setCurrentStep(2)}}
-    function b2Trigger(){
-        if(!errors.organizer &&!errors.role &&!errors.twitter &&!errors.mail){setCurrentStep(3)}}
-    function b3Trigger(){
-        if(!errors.badgeName &&!errors.badgeTotal){setCurrentStep(4)}}
+    async function b1Trigger(){
+        const result1 = await trigger();
+        if(result1){setCurrentStep(2);}}
+        //if(!errors.activityName &&!errors.startDate &&!errors.endDate &&!errors.activityAccess&&!errors.activityLink){setCurrentStep(2)}}
+    async function b2Trigger(){
+        const result2 = await trigger();
+        if(result2){setCurrentStep(3);}}
+        //if(!errors.organizer &&!errors.role &&!errors.twitter &&!errors.mail){setCurrentStep(3)}}
+    async function b3Trigger(){
+        const result3 = await trigger();
+        if(result3){setCurrentStep(4);}}
+        //if(!errors.badgeName &&!errors.badgeTotal){setCurrentStep(4)}}
 
     return (
         <div id="backGround">

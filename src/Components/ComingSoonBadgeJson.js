@@ -18,7 +18,7 @@ const ComingSoonBadgeJson = [
     telegram:"",
     reddit:"",
     badgeAsaId: "1",
-    badgeImgUrl: "/img/badge_image.png",
+    badgeImgUrl: "https://drive.google.com/file/d/1oTqH1Xq5d_xVnRt8EbFLpUw2qSe3YjzV/view",
     badgeName: "badge1",
     badgeTotal: 100,
     badgeHasClaimed: 30,
