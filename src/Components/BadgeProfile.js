@@ -7,6 +7,9 @@ export const BadgeProfile = (props) => {
         getState();
     }, []);
 
+    var claimBadgeUrl;
+    var whiteListUrl;
+
     const getState = async () => {
         const response = await fetch(
             "http://139.155.71.103:8081/customer/activity/link",
@@ -27,11 +30,13 @@ export const BadgeProfile = (props) => {
         console.log(localStorage.getItem("walletAddress")||"");
         console.log(localStorage.getItem("customerNo")||"");
         console.log(jsonResponse);
+        localStorage.setItem("whiteListUrl",jsonResponse.whiteListUrl);
+        localStorage.setItem("claimBadgeUrl",jsonResponse.claimBadgeUrl);
+        console.log(claimBadgeUrl);
     }
 
 
     const badge = props.badge;
-    
     
     return(
             <div className="badgeProfile">
@@ -52,9 +57,8 @@ export const BadgeProfile = (props) => {
                         <h3><span>Event Organizer</span><br/>{badge.organizer}</h3>
 
                         <div style={{display:"flex", flexWrap:"wrap"}}>
-                            <button className='badgeButton'>
-                                How to get it?
-                            </button>
+                            <a href={`${localStorage.getItem("whiteListUrl")}`}><button className='badgeButton'>White List</button></a>
+                            <a href={`${localStorage.getItem("claimBadgeUrl")}`}><button className='badgeButton'>Claim Badge</button></a>
                             <div style={{width:"180px",height:"30px", lineHeight:"12.5px",fontSize:"2px", fontWeight:"200", marginBottom:"20px"}}>Please pay close attention to the social media channel from the organizer</div>
                         </div>
                     </div>

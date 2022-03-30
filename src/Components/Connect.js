@@ -20,7 +20,6 @@ const Connect = () => {
       const addresses = accounts.map((account) => account.address);
       localStorage.setItem('walletAddress', addresses[0]);
       localStorage.setItem('walletConnected', true);
-      window.location.reload();
 
       const response = await fetch(
         "http://139.155.71.103:8081/customer/info",
@@ -41,7 +40,7 @@ const Connect = () => {
       localStorage.setItem("customerName", jsonResponse.customerName);
       localStorage.setItem("customerType", jsonResponse.customerType);
       localStorage.setItem("mail", jsonResponse.mail);
-
+      window.location.reload();
       } catch (err) {
         console.error(err);
       }

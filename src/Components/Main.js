@@ -14,7 +14,7 @@ import ApplyOrganizer from './Profile/ApplyOrganizer';
 
 const Main = () => {
 
-    const timeout = 60000;
+    const timeout = 600000;
     const [remaining, setRemaining] = useState(timeout);
     const [lastActive, setLastActive] = useState(+new Date());
     const [isIdle, setIsIdle] = useState(false);
